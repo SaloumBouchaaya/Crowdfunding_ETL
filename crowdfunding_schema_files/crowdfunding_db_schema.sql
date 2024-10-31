@@ -20,9 +20,9 @@ CREATE TABLE "Subcategory" (
 
 CREATE TABLE "Contacts" (
     "contact_id" INTEGER   NOT NULL,
-    "first_name" VARCHAR(30)   NOT NULL,
-    "last_name" VARCHAR(30)   NOT NULL,
-    "email" VARCHAR(30)   NOT NULL,
+    "first_name" VARCHAR(60)   NOT NULL,
+    "last_name" VARCHAR(60)   NOT NULL,
+    "email" VARCHAR(60)   NOT NULL,
     CONSTRAINT "pk_Contacts" PRIMARY KEY (
         "contact_id"
      )
@@ -31,18 +31,18 @@ CREATE TABLE "Contacts" (
 CREATE TABLE "Campaign" (
     "cf_id" INTEGER   NOT NULL,
     "contact_id" INTEGER   NOT NULL,
-    "company_name" VARCHAR(30)   NOT NULL,
-    "description" VARCHAR(30)   NOT NULL,
-    "goal" INTEGER   NOT NULL,
-    "pledged" INTEGER   NOT NULL,
-    "outcome" BOOLEAN   NOT NULL,
+    "company_name" VARCHAR(60)   NOT NULL,
+    "description" VARCHAR(60)   NOT NULL,
+    "goal" FLOAT   NOT NULL,
+    "pledged" FLOAT   NOT NULL,
+    "outcome" VARCHAR(60)   NOT NULL,
     "backers_count" INTEGER   NOT NULL,
-    "country" VARCHAR(30)   NOT NULL,
-    "currency" VARCHAR(30)   NOT NULL,
+    "country" VARCHAR(60)   NOT NULL,
+    "currency" VARCHAR(60)   NOT NULL,
     "launched_date" DATE   NOT NULL,
     "end_date" DATE   NOT NULL,
-    "category_id" VARCHAR(30)   NOT NULL,
-    "subcategory_id" VARCHAR(30)   NOT NULL,
+    "category_id" VARCHAR(60)   NOT NULL,
+    "subcategory_id" VARCHAR(60)   NOT NULL,
     CONSTRAINT "pk_Campaign" PRIMARY KEY (
         "cf_id"
      )
